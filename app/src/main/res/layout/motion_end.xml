@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4051a3"
+    android:id="@+id/motionLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImage"
+        android:layout_width="430dp"
+        android:layout_height="430dp"
+        android:src="#fb6793"
+        app:layout_constraintBottom_toTopOf="@id/guideline2"
+        app:layout_constraintStart_toEndOf="@id/guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <TextView
+        android:id="@+id/textViewHello"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:text="こんにちは朝"
+        android:textColor="@android:color/background_light"
+        android:textSize="40sp"
+        android:layout_marginBottom="100dp"
+       app:layout_constraintBottom_toTopOf="@id/dialogView"/>
+
+    <ImageView
+        android:id="@+id/dummyImage5"
+        android:layout_width="32dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/halfScreenVertical" />
+
+    <ImageView
+        android:id="@+id/dummyImage6"
+        android:layout_width="64dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/halfScreenVertical" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/halfScreenVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+    <View
+        android:id="@+id/secondBgView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#e7f8e7ff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline2" />
+
+    <LinearLayout
+        android:id="@+id/dialogView"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_bg"
+        app:layout_constraintBottom_toBottomOf="@id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline2" >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/textViewHienOc"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@android:color/holo_red_dark" />
+    </LinearLayout>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
